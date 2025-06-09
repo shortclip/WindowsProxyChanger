@@ -10,8 +10,8 @@ Add-Type -AssemblyName PresentationFramework
 [System.Windows.Forms.Application]::EnableVisualStyles()
 
 $GetProxyStatus = Get-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings"
-$ProxyServer = "129.249.149.12:8080"
-$ProxyOverride = "*.fujixerox.co.jp;*.fxis.co.jp;172.23.5.*;172.23.11.*;129.249.17.*;*elpsq01w.ydc.fujixerox.co.jp*;*elpch01w.ydc.fujixerox.co.jp*;*elpmh01w.ydc.fujixerox.co.jp*;*143.94.42.67*;*129.249.17.147*;172.23.7.*;172.23.11.*;129.249.17.*;https://wd3.myworkday.com*;143.94.48.*"
+$ProxyServer = "XX.XXX.XXX.XXX:8080"
+$ProxyOverride = ""
 
 
 
@@ -58,7 +58,7 @@ function BtnProxyStatus {
     }
  }function UpdateProxyServer {
     $GetProxyStatus = Get-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings"
-    $ProxyServer = "129.249.149.12:8080"
+    $ProxyServer = "XXX.XXX.XXX.XX:8080"
     
 
     if ($GetProxyStatus.ProxyEnable -eq 1) {
